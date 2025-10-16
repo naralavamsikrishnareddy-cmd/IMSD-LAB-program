@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extended Job Application Form</title>
+</head>
+<body>
+    <h2 align="center">Extended Job Application Form</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <table border="1" cellpadding="10" cellspacing="0" align="center">
+            <caption><strong>Applicant Details</strong></caption>
+
+            <tr>
+                <th>Full Name:</th>
+                <td><input type="text" name="fullname" placeholder="Enter your full name" required></td>
+            </tr>
+
+            <tr>
+                <th>Email:</th>
+                <td><input type="email" name="email" placeholder="example@email.com" required></td>
+            </tr>
+
+            <tr>
+                <th>Password:</th>
+                <td><input type="password" name="password" required></td>
+            </tr>
+
+            <tr>
+                <th>Mobile Number:</th>
+                <td><input type="tel" name="phone" pattern="[0-9]{10}" placeholder="10-digit number" required></td>
+            </tr>
+
+            <tr>
+                <th>Age:</th>
+                <td><input type="number" name="age" min="18" max="60"></td>
+            </tr>
+
+            <tr>
+                <th>Date of Birth:</th>
+                <td><input type="date" name="dob"></td>
+            </tr>
+
+            <tr>
+                <th>Gender:</th>
+                <td>
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                    <input type="radio" name="gender" value="Other"> Other
+                </td>
+            </tr>
+
+            <tr>
+                <th>Job Roles Interested:</th>
+                <td>
+                    <input type="checkbox" name="role" value="Developer"> Developer
+                    <input type="checkbox" name="role" value="Designer"> Designer
+                    <input type="checkbox" name="role" value="Tester"> Tester
+                    <input type="checkbox" name="role" value="Manager"> Manager
+                    <input type="checkbox" name="role" value="HR"> HR
+                </td>
+            </tr>
+
+            <tr>
+                <th>Department:</th>
+                <td>
+                    <select name="department">
+                        <option value="">--Select Department--</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="HR">Human Resources</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Operations">Operations</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <th>LinkedIn Profile:</th>
+                <td><input type="url" name="linkedin" placeholder="https://www.linkedin.com/in/username"></td>
+            </tr>
+
+            <tr>
+                <th>Permanent Address:</th>
+                <td><textarea name="address" rows="4" cols="30" placeholder="Enter your address"></textarea></td>
+            </tr>
+
+            <tr>
+                <th>Upload Resume:</th>
+                <td><input type="file" name="resume"></td>
+            </tr>
+
+            <tr>
+                <th>Preferred Interview Time:</th>
+                <td><input type="time" name="interview_time"></td>
+            </tr>
+
+            <tr>
+                <th>Experience Level (0-10):</th>
+                <td><input type="range" name="experience" min="0" max="10"></td>
+            </tr>
+
+            <tr>
+                <th>Favorite Interface Color:</th>
+                <td><input type="color" name="theme_color"></td>
+            </tr>
+
+            <!-- Hidden Field -->
+            <tr>
+                <td colspan="2">
+                    <input type="hidden" name="form_type" value="job_application">
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="2" align="center">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

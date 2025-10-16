@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Embedding Example</title>
+
+  <!-- External JavaScript -->
+  <script src="6a.js"></script>
+</head>
+<body>
+
+  <h1 style="background-color:#876491; color:#ffffff; font-family:Arial;">
+    Welcome to JavaScript Demo
+  </h1>
+
+  <button onclick="internalFunction()" 
+          style="background-color:#398eb3; color:#ffffff; height:48px; font-weight:bold;">
+    Run Internal JS
+  </button>
+
+  <button onclick="externalFunction()" 
+          style="background-color:#398eb3; color:#ffffff; height:48px; font-weight:bold;">
+    Run External JS
+  </button>
+
+  <!-- Internal JavaScript -->
+  <script>
+    function internalFunction() {
+      alert("Hello from Internal JavaScript !!");
+    }
+  </script>
+
+</body>
+</html>

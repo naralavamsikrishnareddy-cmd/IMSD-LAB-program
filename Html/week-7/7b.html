@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Window Object Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    button { margin: 5px; padding: 10px; }
+    #output { margin-top: 20px; padding: 10px; border: 1px solid white; width: fit-content; }
+  </style>
+</head>
+<body>
+  <h1>Window Object Demo</h1>
+
+  <button onclick="showWindowInfo()">Show Window Info</button>
+  <button onclick="openNewWindow()">Open New Window</button>
+  <button onclick="closeNewWindow()">Close New Window</button>
+
+  <div id="output">Window information will appear here...</div>
+
+  <script>
+    let newWin; // store reference of opened window
+
+    // 1. Display current window info
+    function showWindowInfo() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      const url = window.location.href;
+
+      document.getElementById("output").innerHTML =
+        `<b>Window Width:</b> ${width}px<br>` +
+        `<b>Window Height:</b> ${height}px<br>` +
+        `<b>Current URL:</b> ${url}`;
+    }
+
+    // 2. Open a new window
+    function openNewWindow() {
+      newWin = window.open(
+        "https://kresponsive.ccbp.tech",
+        "ExampleWindow",
+        "width=400,height=300"
+      );
+    }
+
+    // 3. Close the opened window
+    function closeNewWindow() {
+      if (newWin && !newWin.closed) {
+        newWin.close();
+      } else {
+        alert("No window is currently open!");
+      }
+    }
+
+    // Optional: Update window info dynamically on resize
+    window.addEventListener('resize', showWindowInfo);
+  </script>
+</body>
+</html>

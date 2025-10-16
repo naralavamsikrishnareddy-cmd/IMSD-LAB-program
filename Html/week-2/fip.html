@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Custom Object Demo</title>
+  <script>
+    // Define a function to run after the page loads
+    function showStudent() {
+      let s1 = {
+        sid: 131,
+        sname: "Raju",
+        marks: 59,
+
+        display: function() {
+          console.log(this.sid + " - " + this.sname + " - " + this.marks);
+          return this.sid + " - " + this.sname + " - " + this.marks;
+        }
+      };
+
+      console.log("STD: " + s1.sid);
+      console.log("sname: " + s1.sname);
+      console.log("Marks: " + s1["marks"]);
+
+      // Call display method and show result in paragraph
+      let res = s1.display();
+      document.getElementById("result").innerHTML = "Student Details: " + res;
+    }
+  </script>
+</head>
+<body onload="showStudent()">
+  <h1>Working with Custom Objects</h1>
+  <p id="result"></p>
+</body>
+</html>
